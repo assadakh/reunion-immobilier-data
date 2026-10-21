@@ -9,7 +9,7 @@ import urllib.request
 from pathlib import Path
 
 URL = "https://files.data.gouv.fr/geo-dvf/latest/csv/{annee}/departements/974.csv.gz"
-ANNEES = range(2020, 2025)  # 2020 à 2024 (la borne de fin est exclue)
+ANNEES = range(2021, 2026)  # 2021 à 2025 (la borne de fin est exclue)
 
 # Dossier data/raw/ à la racine du projet, quel que soit l'endroit d'où on lance le script
 RAW_DIR = Path(__file__).resolve().parent.parent / "data" / "raw"
