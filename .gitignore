@@ -2,3 +2,8 @@
 data/
 .ipynb_checkpoints/
 __pycache__/
+dvf_dbt/target/
+dvf_dbt/logs/
+dvf_dbt/dbt_packages/
+dvf_dbt/.user.yml
+logs/

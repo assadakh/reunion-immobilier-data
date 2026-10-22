@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: dvf
+    schema: main
+    tables:
+      - name: raw_dvf
+        description: "Données DVF brutes chargées par scripts/load_raw.py"

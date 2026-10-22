@@ -3,3 +3,4 @@ duckdb
 jupyter
 pyarrow
 matplotlib
+dbt-duckdb
