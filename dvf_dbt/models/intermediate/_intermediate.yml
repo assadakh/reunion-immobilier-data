@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: int_ventes_simples
+    description: "Une ligne par vente simple (un seul local principal), avec prix au m² et signalement hors marché."
+    columns:
+      - name: id_mutation
+        description: "Identifiant de la mutation"
+        data_tests:
+          - not_null
+          - unique
+      - name: prix_m2
+        data_tests:
+          - not_null
+      - name: type_local
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['Maison', 'Appartement', 'Local industriel. commercial ou assimilé']

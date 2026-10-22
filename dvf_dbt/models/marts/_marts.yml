@@ -1,0 +1,32 @@
+version: 2
+
+models:
+  - name: mart_prix_m2_commune_annee
+    description: >
+      Une ligne par année, commune et type de local (Maison/Appartement) :
+      prix médian au m² des ventes simples, ventes hors marché exclues.
+      Seules les combinaisons avec au moins 10 ventes sont conservées.
+    columns:
+      - name: annee
+        description: "Année de la mutation"
+        data_tests:
+          - not_null
+      - name: nom_commune
+        description: "Nom de la commune"
+        data_tests:
+          - not_null
+      - name: type_local
+        description: "Type de local (Maison ou Appartement)"
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['Maison', 'Appartement']
+      - name: prix_median
+        description: "Prix médian au m² bâti (€), calculé sur les ventes simples, ventes hors marché exclues"
+        data_tests:
+          - not_null
+      - name: nb
+        description: "Nombre de ventes simples utilisées pour le calcul (ventes hors marché exclues), toujours >= 10"
+        data_tests:
+          - not_null
