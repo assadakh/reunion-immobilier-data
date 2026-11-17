@@ -60,7 +60,7 @@ Le projet suit une approche **ELT** :
 
 ### Le piège principal de DVF
 
-Dans DVF, une vente portant sur plusieurs biens (par exemple deux appartements) apparaît sur **plusieurs lignes**, et le **prix total est répété sur chacune**. Une moyenne naïve sur les données brutes donne 2,66 M€, contre une médiane de 255 k€. Le projet ne retient donc que les **ventes simples**, pour lesquelles le prix correspond à un seul logement.
+Dans DVF, une vente portant sur plusieurs biens (par exemple deux appartements) apparaît sur **plusieurs lignes**, et le **prix total est répété sur chacune**. En 2024, une moyenne naïve sur les lignes brutes donne 2,66 M€, contre 273 000 € une fois chaque vente comptée une seule fois. Le projet ne retient donc que les **ventes simples**, pour lesquelles le prix correspond à un seul logement.
 
 ### Ce qui est filtré
 
