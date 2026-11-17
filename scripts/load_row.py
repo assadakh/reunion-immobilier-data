@@ -13,6 +13,6 @@ if __name__ == "__main__":
         CREATE OR REPLACE TABLE raw_dvf AS
         SELECT * FROM read_csv_auto('{RAW_GLOB}', union_by_name = true)
     """)
-    nb = con.sql("SELECT COUNT(*) FROM raw_dvf").fetchone()[0]
+    nb = con.execute("SELECT COUNT(*) FROM raw_dvf").fetchone()[0]
     print(f"raw_dvf : {nb} lignes chargées")
     con.close()
